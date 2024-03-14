@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail - Flipkart Style</title>
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Product image */
+    .product-image {
+      width: 100%;
+      max-width: 400px;
+      margin-right: 20px;
+    }
+
+    /* Product details */
+    .product-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 20px;
+      color: #ff0000; /* Flipkart's price color */
+      margin-bottom: 10px;
+    }
+
+    .product-description {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #2874f0; /* Flipkart's primary color */
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #1e60d5; /* Darker shade on hover */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="product-details">
+    <img class="product-image" src="product_image.jpg" alt="Product Image">
+    <div>
+      <h1 class="product-title">Product Name</h1>
+      <p class="product-price">$99.99</p>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat urna nec ligula luctus, nec varius elit faucibus. Fusce ac elit ac magna congue faucibus.</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

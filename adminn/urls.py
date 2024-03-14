@@ -13,8 +13,10 @@ urlpatterns = [
     path('logout/',views.logout,name='logout'),
     path('category/',views.category,name='category'),
     path('add-category/',views.add_category,name="add-category"),
-    path('product/',views.product,name='product'),
-    path('update-category/<pk>',views.UpdateCategory,name='update-category')
+    
+    path('update-category/<pk>',views.UpdateCategory,name='update-category'),
+    path('products-list',views.product_list,name='product_list'),
+    path('add-products',views.add_products,name='add_products')
 ]
 
 urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,16 +1,3 @@
-
-
-    {% comment %} <h2><a class="btn btn-success" href="{% url 'add-category' %}">add category</a></h2>
-
-
-    <h1>category list</h1>
-    <br>
-{% for categories in categories %}
-
-<h3>{{categories.name}}</h3>
-
-{% endfor %} {% endcomment %}
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -70,40 +57,16 @@
       <link rel="stylesheet" href="{% static "css/styles.css" %}">
 </head>
 <body>
-    <div class="header">
-        <h1>Admin Panel</h1>
-    </div>
-    <div class="content">
-        <a href="{% url 'add-category' %}"><button class="add-category-btn" >Add Category</button></a>
-        <h2>Categories</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for category in categories %}
-                <tr>
-                    <td>{{ category.id }}</td>
-                    <td>{{ category.name}}</td>
-                    <td class="action-buttons">
-                        <a class="btn btn-success" href="{% url 'update-category' category.id %}">Update</a>
-                        {% if category.is_active %}
-                        
-                        <a class="btn btn-success" href="">Active</a>
-                        {% else %}
-                        <a class="btn btn-danger" href="">Not Active</a>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
 
-                        {% endif %}
-                    </td>
+        {{frm.as_p}}
 
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+
+        <input type="file" name="image" id="id_image" multiple>
+
+        <button type="submit" id="confirm-btn">Submit</button>
+
+    </form>
 </body>
 </html>
